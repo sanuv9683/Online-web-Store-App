@@ -1,0 +1,367 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 2, 2017, 5:07:03 PM
+    Author     : Sanu
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+
+/*==========================================
+PRE LOADER 
+==========================================*/
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fefefe;
+    z-index: 99999;
+    height: 100%;
+    width: 100%;
+    overflow: hidden !important;
+}
+
+.loaded {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-image: url(../images/loading.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    -moz-background-size: cover;
+    background-size: cover;
+    margin: -20px 0 0 -20px;
+}
+#particles-js{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: 50% 50%;
+    position: fixed;
+    top: 0px;
+    z-index:1;
+}
+
+/*///*/
+
+@font-face {
+    font-family: 'Raleway', sans-serif;
+}
+CSS reset 
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
+    margin:0;
+    padding:0;
+}
+html,body {
+    margin:0;
+    padding:0;
+    height: 100%;
+}
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+fieldset,img { 
+    border:0;
+}
+address,caption,cite,code,dfn,th,var {
+    font-style:normal;
+    font-weight:normal;
+}
+ol,ul {
+    list-style:none;
+}
+caption,th {
+    text-align:left;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-size:100%;
+    font-weight:normal;
+}
+q:before,q:after {
+    content:'';
+}
+abbr,acronym { border:0;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+General Demo Style 
+body{
+    font-family: Cambria, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+    background: #fff url(../images/bg.jpg) repeat top left;
+    font-weight: 400;
+    font-size: 15px;
+    color: #1d3c41;
+    overflow-y: scroll;
+}
+a{
+    color: #333;
+    text-decoration: none;
+}
+.clr{
+    clear: both;
+}
+.container > header{
+    padding: 20px 30px 10px 30px;
+    margin: 0px 20px 10px 20px;
+    position: relative;
+    display: block;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    text-align: center;
+}
+.container > header h1{
+    font-family: 'Raleway', sans-serif;
+    font-size: 35px;
+    line-height: 35px;
+    position: relative;
+    color:#FFF;
+    padding: 0px 0px 5px 0px;
+    font-weight:600;
+}
+.container > header h1 span{
+    color: #7cbcd6;
+    text-shadow: 0px 1px 1px rgba(255,255,255,0.8);
+}
+.container > header h2{
+    font-size: 16px;
+    font-style: italic;
+    color: #2d6277;
+    text-shadow: 0px 1px 1px rgba(255,255,255,0.8);
+}
+Header Style 
+.codrops-top{
+    line-height: 24px;
+    font-size: 11px;
+    background: rgba(255, 255, 255, 0.4);
+    text-transform: uppercase;
+    z-index: 9999;
+    position: relative;
+    box-shadow: 1px 0px 2px rgba(0,0,0,0.2);
+}
+.codrops-top a{
+    padding: 0px 10px;
+    letter-spacing: 1px;
+    color: #333;
+    text-shadow: 0px 1px 1px #fff;
+    display: block;
+    float: left;
+}
+.codrops-top a:hover{
+    background: #fff;
+}
+.codrops-top span.right{
+    float: right;
+}
+.codrops-top span.right a{
+    float: left;
+    display: block;
+}
+
+.codrops-demos{
+    text-align:center;
+    display: block;
+    padding: 14px;
+}
+.codrops-demos span{
+    display: inline-block;
+    padding-right: 15px;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8);
+}
+.codrops-demos a,
+.codrops-demos a.current-demo,
+.codrops-demos a.current-demo:hover{
+    display: inline-block;
+    font-style: italic;
+    font-size: 12px;
+    padding: 3px 5px;
+    margin: 0px 3px;
+    font-weight: 800;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.05) inset;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+    background: rgba(104,171,194,0.5);
+}
+.codrops-demos a:hover{
+    background: #4fa2c4;
+}
+.codrops-demos a.current-demo,
+.codrops-demos a.current-demo:hover{
+    color: rgba(104,171,194,1);
+    background: rgba(255,255,255,0.9);
+    box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+}
+
+body{background:url(../images/banner-5.jpg);
+     background-attachment:fixed;
+     background-size:cover;
+     background-repeat: no-repeat;
+}
+
+/*//*/
+
+
+
+.login-block{
+    /*background: #DE6262;   fallback for old browsers */
+    /*background: -webkit-linear-gradient(to bottom, #FFB88C, #DE6262);   Chrome 10-25, Safari 5.1-6 */
+    /*background: linear-gradient(to bottom, #FFB88C, #DE6262);  W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    float:left;
+    width:100%;
+    padding : 50px 0;
+    z-index: 1000;
+}
+.banner-sec{background:url(https://static.pexels.com/photos/33972/pexels-photo.jpg)  no-repeat left bottom; background-size:cover; min-height:500px; border-radius: 0 10px 10px 0; padding:0;}
+.container{background:#fff; border-radius: 10px; box-shadow:15px 20px 0px rgba(0,0,0,0.1);}
+.carousel-inner{border-radius:0 10px 10px 0;}
+.carousel-caption{text-align:left; left:5%;}
+.login-sec{padding: 50px 30px; position:relative;}
+.login-sec .copy-text{position:absolute; width:80%; bottom:20px; font-size:13px; text-align:center;}
+.login-sec .copy-text i{color:#FEB58A;}
+.login-sec .copy-text a{color:#E36262;}
+.login-sec h2{margin-bottom:30px; font-weight:800; font-size:30px; color: #DE6262;}
+.login-sec h2:after{content:" "; width:100px; height:5px; background:#FEB58A; display:block; margin-top:20px; border-radius:3px; margin-left:auto;margin-right:auto}
+.btn-login{background: #DE6262; color:#fff; font-weight:600;}
+.banner-text{width:70%; position:absolute; bottom:40px; padding-left:20px;}
+.banner-text h2{color:#fff; font-weight:600;}
+.banner-text h2:after{content:" "; width:100px; height:5px; background:#FFF; display:block; margin-top:20px; border-radius:3px;}
+.banner-text p{color:#fff;}
+
+
+
+/*////////////////*/
+/*
+Fade content bs-carousel with hero headers
+Code snippet by maridlcrmn (Follow me on Twitter @maridlcrmn) for Bootsnipp.com
+Image credits: unsplash.com
+*/
+
+/********************************/
+/*       Fade Bs-carousel       */
+/********************************/
+.fade-carousel {
+    position: relative;
+    height: 80vh;
+}
+.fade-carousel .carousel-inner .item {
+    height: 80vh;
+}
+.fade-carousel .carousel-indicators > li {
+    margin: 0 2px;
+    background-color: #f39c12;
+    border-color: #f39c12;
+    opacity: .7;
+}
+.fade-carousel .carousel-indicators > li.active {
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+}
+
+/********************************/
+/*          Hero Headers        */
+/********************************/
+.hero {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0 rgba(0,0,0,.75);
+      -webkit-transform: translate3d(-50%,-50%,0);
+         -moz-transform: translate3d(-50%,-50%,0);
+          -ms-transform: translate3d(-50%,-50%,0);
+           -o-transform: translate3d(-50%,-50%,0);
+              transform: translate3d(-50%,-50%,0);
+}
+.hero h1 {
+    font-size: 4em;    
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+.fade-carousel .carousel-inner .item .hero {
+    opacity: 0;
+    -webkit-transition: 2s all ease-in-out .1s;
+       -moz-transition: 2s all ease-in-out .1s; 
+        -ms-transition: 2s all ease-in-out .1s; 
+         -o-transition: 2s all ease-in-out .1s; 
+            transition: 2s all ease-in-out .1s; 
+}
+.fade-carousel .carousel-inner .item.active .hero {
+    opacity: 1;
+    -webkit-transition: 2s all ease-in-out .1s;
+       -moz-transition: 2s all ease-in-out .1s; 
+        -ms-transition: 2s all ease-in-out .1s; 
+         -o-transition: 2s all ease-in-out .1s; 
+            transition: 2s all ease-in-out .1s;    
+}
+
+/********************************/
+/*            Overlay           */
+/********************************/
+.overlay {
+/*    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: #080d15;
+    opacity: .7;*/
+}
+
+/********************************/
+/*          Custom Buttons      */
+/********************************/
+.btn.btn-lg {padding: 10px 40px;}
+.btn.btn-hero,
+.btn.btn-hero:hover,
+.btn.btn-hero:focus {
+    color: #f5f5f5;
+    background-color: #1abc9c;
+    border-color: #1abc9c;
+    outline: none;
+    margin: 20px auto;
+}
+
+/********************************/
+/*       Slides backgrounds     */
+/********************************/
+.fade-carousel .slides .slide-1, 
+.fade-carousel .slides .slide-2,
+.fade-carousel .slides .slide-3 {
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.fade-carousel .slides .slide-1 {
+  background-image: url(https://ununsplash.imgix.net/photo-1416339134316-0e91dc9ded92?q=75&fm=jpg&s=883a422e10fc4149893984019f63c818); 
+}
+.fade-carousel .slides .slide-2 {
+  background-image: url(https://ununsplash.imgix.net/photo-1416339684178-3a239570f315?q=75&fm=jpg&s=c39d9a3bf66d6566b9608a9f1f3765af);
+}
+.fade-carousel .slides .slide-3 {
+  background-image: url(https://ununsplash.imgix.net/photo-1416339276121-ba1dfa199912?q=75&fm=jpg&s=9bf9f2ef5be5cb5eee5255e7765cb327);
+}
+
+/********************************/
+/*          Media Queries       */
+/********************************/
+@media screen and (min-width: 980px){
+    .hero { width: 980px; }    
+}
+@media screen and (max-width: 640px){
+    .hero h1 { font-size: 4em; }    
+}

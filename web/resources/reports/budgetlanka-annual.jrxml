@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2017-12-08T15:27:32 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Cherry_Table_Based" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4eedbb89-b4f6-4469-9ab6-f642a1688cf7">
+	<property name="template.engine" value="tabular_template"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false"/>
+	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#F0EFEF"/>
+		</conditionalStyle>
+	</style>
+	<style name="Table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+			<topPen lineWidth="1.0" lineColor="#000000"/>
+			<leftPen lineWidth="1.0" lineColor="#000000"/>
+			<bottomPen lineWidth="1.0" lineColor="#000000"/>
+			<rightPen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="tableDataset" uuid="eee09bac-91ad-4490-82f2-9262b6fd0130">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+	</subDataset>
+	<parameter name="pend" class="java.lang.Integer"/>
+	<parameter name="pro" class="java.lang.Integer"/>
+	<parameter name="sub" class="java.lang.Integer"/>
+	<parameter name="comm" class="java.lang.Integer"/>
+	<parameter name="can" class="java.lang.Integer"/>
+	<parameter name="retu" class="java.lang.Integer"/>
+	<parameter name="total" class="java.lang.Integer"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<title>
+		<band height="83" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<staticText>
+				<reportElement x="3" y="57" width="40" height="19" uuid="4c3d7584-4310-4d29-8aa9-f4b5292d4bae"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Month:  ]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="54" y="57" width="140" height="20" uuid="8807f438-13c1-4c28-9e6e-3a00bfbb6043"/>
+				<textElement>
+					<font fontName="SansSerif" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="328" y="59" width="100" height="19" uuid="1c98f43e-b550-403f-b537-1654f7acd1d6"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Time: ]]></text>
+			</staticText>
+			<textField pattern="HH:mm">
+				<reportElement x="434" y="59" width="119" height="19" forecolor="#666666" uuid="8c533ca7-717a-4210-b559-9ec333341f66"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="1" y="81" width="555" height="1" uuid="0d3291be-9cc9-4c53-a27a-39c4d103fd08"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="5" y="0" width="356" height="45" uuid="9b8ff2a7-ad8f-441a-97c1-45c0e31f61c1"/>
+				<textElement>
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Annual Report For Orders]]></text>
+			</staticText>
+		</band>
+	</title>
+	<summary>
+		<band height="401">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<staticText>
+				<reportElement x="10" y="339" width="138" height="30" uuid="862ef1bb-c9ff-4e4e-b9eb-87549319a755"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[On Date                    :]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="185" y="339" width="128" height="30" forecolor="#1581ED" uuid="62ac6bb1-b9e8-4f20-b950-1fcdcec00f2a"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="185" y="299" width="128" height="30" forecolor="#1581ED" uuid="827a15d4-d0e4-41c4-ba85-9d6677db968d"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="12" y="15" width="138" height="30" uuid="4fa9f352-f56d-400b-8894-3c9313014aca"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pending Orders       :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="55" width="138" height="30" uuid="7550bb8b-2b01-442c-888d-2e7a14986ea5"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Processing Orders   :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="95" width="138" height="30" uuid="a5f690cf-9035-4bf3-9baf-23287091f26d"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Delivered Orders      :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="135" width="138" height="30" uuid="fbb2bd6f-75ee-4289-9b1a-f055141ace8e"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Completed Orders    :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="175" width="138" height="30" uuid="5ab432b4-3010-45c8-81d6-e45999d4c3e3"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cancelled Orders      :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="215" width="138" height="30" uuid="2ab0e7da-da16-4b0e-bfdb-23b2f64ad28c"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Returned Orders      :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="300" width="138" height="30" uuid="acf9e77f-4f7f-4f40-a839-b7d4f1e6dbcb"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Time                          :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="185" y="15" width="128" height="30" forecolor="#1581ED" uuid="f414237b-cbba-4a55-b185-0ad513b7645f"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{pend}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="185" y="55" width="128" height="30" forecolor="#1581ED" uuid="c38c83d0-cb3c-4c57-bb0b-0039e3f2a7ec"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{pro}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="185" y="95" width="128" height="30" forecolor="#1581ED" uuid="b510275b-9d46-48cc-92ef-0be90146dbda"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{sub}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="185" y="135" width="128" height="30" forecolor="#1581ED" uuid="826cf0da-d4e7-400e-86b1-ccf60fbc3ce8"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{comm}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="185" y="175" width="128" height="30" forecolor="#1581ED" uuid="8dcaffe0-f78d-430d-88ed-59278bf395ae"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{can}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="185" y="215" width="128" height="30" forecolor="#1581ED" uuid="b3eb9f44-a4d0-40a9-a11c-02fd250e5c83"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{retu}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="260" width="138" height="30" uuid="625adeee-c022-4fdd-b2cf-f8208e26a8c0"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Orders             :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="185" y="262" width="100" height="30" forecolor="#288CDE" uuid="3f9498b9-1fa4-4934-af1c-cea281262411"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{total}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="327" y="384" width="224" height="13" uuid="1b1c78cf-50f5-43f8-884c-6f22681503d4"/>
+				<text><![CDATA[System Generated Report Developed by IJSE]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

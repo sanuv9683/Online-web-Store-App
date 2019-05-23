@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2017-12-21T18:04:41 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Leaf_Grey" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a1f690a3-5977-4467-85f8-6b0bcd5b7210">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<parameter name="total" class="java.lang.Double"/>
+	<parameter name="tcus" class="java.lang.Double"/>
+	<parameter name="date" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="cname" class="java.lang.String"/>
+	<field name="pro" class="java.lang.Integer"/>
+	<field name="tottax" class="java.lang.Double"/>
+	<field name="income" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="83" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="420" height="33" uuid="6f9c1004-6140-4588-9c4f-d75824835765"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="24" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Income received by each customer]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="59" width="40" height="19" uuid="72f4ca5b-939d-4626-8bde-191ff73c2cec"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Month:  ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="330" y="61" width="100" height="19" uuid="fd213fc3-9480-4453-85e8-0543a7a84aaf"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Time: ]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="56" y="59" width="140" height="20" uuid="5a79d2a0-bcde-4ad5-adf0-c4eb2066f6dd"/>
+				<textElement>
+					<font fontName="SansSerif" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="436" y="61" width="119" height="19" forecolor="#666666" uuid="2555171d-2b46-45be-af25-6024ed462740"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="50" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="-3" width="555" height="1" uuid="544e89f7-0fd1-4142-aa23-e335e3be7007"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="7" y="20" width="143" height="30" uuid="12c0feca-37e0-486d-8cd9-42ca50767ef9"/>
+				<text><![CDATA[Customer Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="163" y="20" width="130" height="30" uuid="3312c6cb-273f-4219-a72c-0651228c6ded"/>
+				<text><![CDATA[No of Products]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="318" y="20" width="105" height="30" uuid="3bea8b89-70dd-45e2-9cc0-b18baa3c5295"/>
+				<text><![CDATA[Total Tax]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="444" y="20" width="96" height="30" uuid="d711c01c-816b-497e-b48b-47c9a88665ff"/>
+				<text><![CDATA[Income Received]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="43" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<textField>
+				<reportElement x="7" y="10" width="143" height="20" forecolor="#575251" uuid="62ac1d60-6bca-4991-8b42-8bcb069158a9"/>
+				<textFieldExpression><![CDATA[$F{cname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="163" y="11" width="130" height="19" forecolor="#575251" uuid="838c5e9b-2976-4b31-b232-4eba0b4aee96"/>
+				<textFieldExpression><![CDATA[$F{pro}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="318" y="10" width="105" height="20" forecolor="#575251" uuid="d954ade5-450f-44d4-bce0-e621d4866cb3"/>
+				<textFieldExpression><![CDATA[$F{tottax}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="444" y="10" width="96" height="20" forecolor="#575251" uuid="f05548f1-e03a-4a44-b0c2-e023bf42e94f"/>
+				<textFieldExpression><![CDATA[$F{income}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="150" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="-3" y="148" width="555" height="1" uuid="401e0e59-de38-4dd2-8257-418cb489177c"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="-3" y="102" width="555" height="1" uuid="cb229859-ab9a-4aa3-afa2-84439642f4ee"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="3" y="7" width="225" height="20" uuid="5efb2e27-c2df-4cf4-a638-8be31be79909"/>
+				<text><![CDATA[Total tax paid]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="3" y="36" width="225" height="16" uuid="25fad6ae-d13e-45ca-a829-d5748bba33cd"/>
+				<text><![CDATA[Total income received by all customers]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="326" y="129" width="224" height="13" uuid="38994e81-25d1-44d1-9baa-de6471656255"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[System Generated Report Developed by IJSE]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="310" y="8" width="235" height="19" forecolor="#575251" uuid="adf2d378-6742-460c-9a5e-30e5b5275c42"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="310" y="36" width="235" height="16" forecolor="#575251" uuid="35b8ceb4-7203-4aff-99e9-4c580ec16a2b"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{tcus}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="4" y="63" width="100" height="17" uuid="e0b0b734-0e77-4a10-b2be-f0e376c771b0"/>
+				<text><![CDATA[Period]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="310" y="61" width="235" height="19" uuid="293758fd-4a97-474b-baff-dfdf9f2b73f3"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{date}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>
