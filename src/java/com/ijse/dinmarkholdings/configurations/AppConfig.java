@@ -32,8 +32,8 @@ public class AppConfig extends WebMvcConfigurerAdapter {
         JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
         mailSender.setHost("smtp.gmail.com");
         mailSender.setPort(587);
-        mailSender.setUsername("budgetlankaofficial@gmail.com");
-        mailSender.setPassword("adminadmin");
+        mailSender.setUsername("youremail");
+        mailSender.setPassword("yourpass");
         Properties javaMailProperties = new Properties();
         javaMailProperties.put("mail.smtp.starttls.enable", "true");
         javaMailProperties.put("mail.smtp.auth", "true");
